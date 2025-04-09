@@ -7,4 +7,4 @@ const FeedbackSchema = new mongoose.Schema({
 },
 {timestamps: true});
 
-module.exports = mongoose.model('Feedback', FeedbackSchema);
+export default mongoose.model('Feedback', FeedbackSchema);

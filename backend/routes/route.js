@@ -18,10 +18,10 @@ router.post('/submit-feedback', async (req, res) => {
 router.get('/feedbacks', async (req, res) => {
   try {
     const feedbacks = await Feedback.find().sort({ createdAt: -1 });
-    res.json(feedbacks);
+    res.status(200).json(feedbacks);
   } catch (err) {
     res.status(500).json({ success: false, message: 'Error fetching feedbacks' });
   }
 });
 
-module.exports = router;
+export default router;
