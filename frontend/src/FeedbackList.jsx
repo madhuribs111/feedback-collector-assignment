@@ -8,7 +8,7 @@ function FeedbackList() {
 
   const fetchFeedbacks = async () => {
     try {
-      const res = await axios.get('https://backend-url.com/feedbacks');
+      const res = await axios.get('https://feedback-collector-backend-mbvg.onrender.com/api/feedbacks');
       setFeedbacks(res.data);
     } catch {
       alert('Error fetching feedbacks');

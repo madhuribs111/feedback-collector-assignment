@@ -20,7 +20,7 @@ function Home() {
       }
     setLoading(true);
     try {
-      await axios.post('https://backend-url.com/submit-feedback', formData);
+      await axios.post('https://feedback-collector-backend-mbvg.onrender.com/api/submit-feedback', formData);
       toast.success('Feedback submitted successfully!');
     setFormData({ fullName: '', email: '', message: '' });
     } catch {
